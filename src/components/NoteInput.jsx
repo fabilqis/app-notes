@@ -3,9 +3,9 @@ import { useState } from "react";
 import Input from "./InputBox";
 
 
-function  NoteInput ({setNotes }){
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
+function  NoteInput ({setNotes}){
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
 
     const onSubmitEventHandler = (event) => {
         event.preventDefault();
@@ -21,6 +21,8 @@ function  NoteInput ({setNotes }){
                 archived : false,
             }
         ])
+        setTitle([]);
+        setBody([]);
     }
 
     return (
